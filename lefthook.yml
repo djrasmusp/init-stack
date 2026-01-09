@@ -69,7 +69,17 @@ post-checkout:
         echo "NEW=$LEFTHOOK_NEW_REF"
     pull-main:
       run: |
-        if [ "$LEFTHOOK_CHECKOUT_TYPE" = "1" ] && [ "$(git branch --show-current)" = "main" ]; then
+        OLD_REF="$1"
+        NEW_REF="$2"
+        FLAG="$3"
+        
+        # Ignore lefthook sync run (no args)
+        if [ -z "$NEW_REF" ]; then
+          exit 0
+        fi
+        
+        # Only on branch checkout + main
+        if [ "$FLAG" = "1" ] && [ "$(git branch --show-current)" = "main" ]; then
           echo "On main branch – pulling latest changes"
           git pull --ff-only
         fi
