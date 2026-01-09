@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "experimentalSortImports": {
+    "internalPattern": [
+      "^@/",
+      "^components/",
+      "^hooks/",
+      "^utils/",
+      "^services/",
+      "^contexts/",
+      "^store/"
+    ],
+    "newlinesBetween": true,
+    "partitionByComment": true
+  },
+  "experimentalTailwindcss" : {
+    "attributes": ["class", "className"],
+    "functions": ["clsx", "cn", "cva", "tw"],
+    "preserveDuplicates": true,
+    "preserveWhitespace": true,
+    "stylesheet": "./src/assets/css/main.css"
+  }
+}
