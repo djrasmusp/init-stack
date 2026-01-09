@@ -64,9 +64,9 @@ post-checkout:
   commands:
     test:
       run: |
-        echo "TYPE=$LEFTHOOK_CHECKOUT_TYPE"
-        echo "OLD=$LEFTHOOK_OLD_REF"
-        echo "NEW=$LEFTHOOK_NEW_REF"
+        echo "TYPE=$3"
+        echo "OLD=$1"
+        echo "NEW=$2"
     pull-main:
       run: |
         OLD_REF="$1"
