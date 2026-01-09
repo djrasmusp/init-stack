@@ -62,6 +62,11 @@ pre-push:
 
 post-checkout:
   commands:
+    test:
+      run: |
+        echo "TYPE=$LEFTHOOK_CHECKOUT_TYPE"
+        echo "OLD=$LEFTHOOK_OLD_REF"
+        echo "NEW=$LEFTHOOK_NEW_REF"
     pull-main:
       run: |
         if [ "$LEFTHOOK_CHECKOUT_TYPE" = "1" ] && [ "$(git branch --show-current)" = "main" ]; then
