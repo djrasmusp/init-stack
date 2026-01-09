@@ -11,13 +11,7 @@
       "^store/"
     ],
     "newlinesBetween": true,
-    "partitionByComment": true
-  },
-  "experimentalTailwindcss": {
-    "attributes": ["class", "className"],
-    "functions": ["clsx", "cn", "cva", "tw"],
-    "preserveDuplicates": true,
-    "preserveWhitespace": true,
-    "stylesheet": "./src/assets/css/main.css"
+    "partitionByComment": true,
+    "singleAttributePerLine": true
   }
 }
