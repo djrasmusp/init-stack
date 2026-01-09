@@ -13,7 +13,7 @@
     "newlinesBetween": true,
     "partitionByComment": true
   },
-  "experimentalTailwindcss" : {
+  "experimentalTailwindcss": {
     "attributes": ["class", "className"],
     "functions": ["clsx", "cn", "cva", "tw"],
     "preserveDuplicates": true,

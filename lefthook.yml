@@ -42,7 +42,7 @@
 #       runner: go run
 
 pre-commit:
-  parallel: true
+  piped: true
   commands:
     format:
       glob: "*.{ts,tsx,js,jsx,json,css,md}"
