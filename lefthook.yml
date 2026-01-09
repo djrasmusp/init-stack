@@ -44,6 +44,8 @@
 pre-commit:
   piped: true
   commands:
+    audit:
+      run: pnpm audit
     format:
       glob: "*.{ts,tsx,js,jsx,json,css,md}"
       run: pnpm oxfmt {files}
