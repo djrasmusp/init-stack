@@ -59,3 +59,12 @@ pre-push:
   commands:
     build:
       run: pnpm build
+
+post-checkout:
+  commands:
+    pull-main:
+      run: |
+        if [ "$(git branch --show-current)" = "main" ]; then
+          echo "On main branch – pulling latest changes"
+          git pull --ff-only
+        fi
