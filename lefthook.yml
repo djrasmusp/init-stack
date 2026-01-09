@@ -62,14 +62,9 @@ pre-push:
 
 post-checkout:
   commands:
-    test:
-      run: |
-        echo "TYPE=$LEFTHOOK_CHECKOUT_TYPE"
-        echo "OLD=$LEFTHOOK_OLD_REF"
-        echo "NEW=$LEFTHOOK_NEW_REF"
     pull-main:
       run: |
-        if [ "$LEFTHOOK_CHECKOUT_TYPE" = "1" ] && [ "$(git branch --show-current)" = "main" ]; then
+        if [ "$(git branch --show-current)" = "main" ]; then
           echo "On main branch – pulling latest changes"
           git pull --ff-only
         fi
