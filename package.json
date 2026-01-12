@@ -2,6 +2,11 @@
   "name": "init-stack",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Rasmus P",
+    "email": "hello@rasmusp.com",
+    "url": "https://rasmusp.com"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
