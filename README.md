@@ -44,6 +44,11 @@ pnpm lint:fix
 
 # Type check
 pnpm typecheck
+
+# Docker commands
+pnpm docker:build    # Build Docker image
+pnpm docker:run      # Run Docker container
+pnpm docker:stop     # Stop Docker container
 ```
 
 ## Development
@@ -65,6 +70,41 @@ import Component from "@/components/Component";
 ## Build
 
 Build the project with `pnpm build`. The output will be in the `dist/` folder with source maps enabled.
+
+## Docker
+
+The project includes a Dockerfile for containerized deployment using nginx with Brotli compression support.
+
+### Building the Docker Image
+
+```bash
+# Build the Docker image
+pnpm docker:build
+
+# Or manually
+docker build -t init-stack .
+```
+
+### Running the Container
+
+```bash
+# Run the container
+pnpm docker:run
+
+# Or manually
+docker run -p 8080:80 init-stack
+```
+
+The application will be available at `http://localhost:8080`.
+
+### Docker Features
+
+- **Multi-stage build**: Optimized build process with separate build and production stages
+- **Brotli compression**: Better compression than gzip (15-20% smaller files)
+- **SPA routing**: Configured to handle React Router and other SPA routing
+- **Security headers**: X-Frame-Options, X-Content-Type-Options, and X-XSS-Protection
+- **Static asset caching**: Long-term caching for static assets
+- **Health check endpoint**: Available at `/health`
 
 ## Git Hooks (Lefthook)
 

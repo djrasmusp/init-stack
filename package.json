@@ -16,7 +16,10 @@
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "docker:build": "docker build -t init-stack .",
+    "docker:run": "docker run -p 8080:80 --name init-stack-container init-stack",
+    "docker:stop": "docker stop init-stack-container && docker rm init-stack-container"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
