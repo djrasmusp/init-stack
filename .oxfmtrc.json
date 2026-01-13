@@ -13,5 +13,10 @@
     "newlinesBetween": true,
     "partitionByComment": true,
     "singleAttributePerLine": true
+  },
+  "experimentalTailwindcss": {
+    "stylesheet": "./src/assets/css/main.css",
+    "attributes": ["class", "className"],
+    "functions": ["clsx", "cn"]
   }
 }
