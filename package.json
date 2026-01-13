@@ -36,16 +36,16 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
     "globals": "^16.5.0",
-    "lefthook": "^2.0.13",
-    "oxfmt": "^0.23.0",
-    "oxlint": "^1.38.0",
+    "lefthook": "^2.0.15",
+    "oxfmt": "^0.24.0",
+    "oxlint": "^1.39.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "npm:rolldown-vite@7.2.5"
+    "typescript-eslint": "^8.52.0",
+    "vite": "npm:rolldown-vite@7.3.1"
   },
   "pnpm": {
     "overrides": {
-      "vite": "npm:rolldown-vite@7.2.5"
+      "vite": "npm:rolldown-vite@7.3.1"
     },
     "onlyBuiltDependencies": [
       "lefthook"
