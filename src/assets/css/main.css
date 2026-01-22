@@ -111,3 +111,23 @@ button:focus-visible {
 .read-the-docs {
   color: #888;
 }
+
+/*
+ utilities for:
+ Text-box: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-box
+ */
+@utility text-box-trim-* {
+  --tbt: --value("none", "trim-start", "trim-end", "trim-both");
+}
+
+@utility text-box-edge-start-* {
+  --tbe-start: --value("text", "cap", "ex");
+}
+
+@utility text-box-edge-end-* {
+  --tbe-end: --value("alphabetic", "text");
+}
+
+@utility text-box {
+  text-box: var(--tbt, none) var(--tbe-start, text) var(--tbe-end, text);
+}
