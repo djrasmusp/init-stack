@@ -25,25 +25,25 @@
     "docker:stop": "docker stop init-stack-container && docker rm init-stack-container"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.3.1",
-    "@commitlint/config-conventional": "^20.3.1",
-    "@commitlint/types": "^20.3.1",
+    "@commitlint/cli": "^20.4.0",
+    "@commitlint/config-conventional": "^20.4.0",
+    "@commitlint/types": "^20.4.0",
     "@tailwindcss/vite": "^4.1.18",
-    "@types/node": "^24.10.1",
-    "@types/react": "^19.2.9",
+    "@types/node": "^25.1.0",
+    "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
-    "globals": "^16.5.0",
-    "lefthook": "^2.0.15",
-    "oxfmt": "^0.26.0",
-    "oxlint": "^1.41.0",
+    "globals": "^17.2.0",
+    "lefthook": "^2.0.16",
+    "oxfmt": "^0.27.0",
+    "oxlint": "^1.42.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.53.1",
+    "typescript-eslint": "^8.54.0",
     "vite": "npm:rolldown-vite@7.3.1"
   },
   "pnpm": {
